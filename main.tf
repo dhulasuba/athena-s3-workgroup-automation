@@ -6,7 +6,7 @@
  publish_cloudwatch_metrics_enabled = var.publish_cloudwatch_metrics_enabled
 
  result_configuration {
- output_location = "s3:// athena-workload-dev"
+ output_location = var.ouput_location
  }
  }
  }
