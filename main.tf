@@ -1,9 +1,9 @@
-resource "aws_s3_bucket" " athena-workload-dev" {
+resource "aws_s3_bucket" "athena-workload-dev" {
   bucket = " athena-workload-dev"
   acl    = "private"
 
   tags = {
-    Name        = " athena-workload-dev"
+    Name        = "athena-workload-dev"
     Environment = "Workload Development "
   }
 }
