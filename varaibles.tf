@@ -6,7 +6,8 @@ variable "enforce_workgroup_configuration" {
 
 variable "name" {
   type        = string
-  description = "The name of the AWS IAM policy."
+  description = "The name of the workgroup."
+  default  = ["docdb_query_user_business_lending","docdb_query_user_corporate","docdb_query_user_new_horizon"]
 }
 
 variable "output_location" {
