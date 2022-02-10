@@ -13,7 +13,7 @@ variable "name" {
 variable "output_location" {
   type        = string
   description = "The location in Amazon S3 where your query results are stored, such as s3://path/to/query/bucket/."
-  default = s3:// athena-workload-dev
+  default = athena-workload-dev
 }
 
 variable "publish_cloudwatch_metrics_enabled" {
