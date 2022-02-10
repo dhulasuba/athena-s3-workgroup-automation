@@ -1,23 +1,11 @@
-resource "aws_s3_bucket" "athena-workload-dev" {
-  bucket = " athena-workload-dev"
-  acl    = "private"
 
-  tags = {
-    Name        = "athena-workload-dev"
-    Environment = "Workload Development "
+
+
+#Creates an AWS Athena workgroup
+module "athena_workgroup" {
+    source = "git::https://github.com/dhulasuba/athena-s3-workgroup-automation.git"
+    count   = length(var.name)
+    name = var.name[count.index]
+    #output_location = var.output_location
+    output_location = "s3:// athena-workload-dev"
   }
-}
- 
-
-resource "aws_athena_workgroup" "docdb_query_user_business_lending" {
-  count   = length(var.name)
- name = var.name[count.index]
- configuration {
- enforce_workgroup_configuration    = var.enforce_workgroup_configuration
- publish_cloudwatch_metrics_enabled = var.publish_cloudwatch_metrics_enabled
-
- result_configuration {
- output_location = var.output_location
- }
- }
- }
