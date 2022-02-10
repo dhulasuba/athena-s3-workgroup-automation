@@ -1,4 +1,15 @@
- resource "aws_athena_workgroup" "docdb_query_user_business_lending" {
+resource "aws_s3_bucket" " athena-workload-dev" {
+  bucket = " athena-workload-dev"
+  acl    = "private"
+
+  tags = {
+    Name        = " athena-workload-dev"
+    Environment = "Workload Development "
+  }
+}
+ 
+
+resource "aws_athena_workgroup" "docdb_query_user_business_lending" {
   count   = length(var.name)
  name = var.name[count.index]
  configuration {
