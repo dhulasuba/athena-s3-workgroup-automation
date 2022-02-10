@@ -6,7 +6,7 @@
  publish_cloudwatch_metrics_enabled = var.publish_cloudwatch_metrics_enabled
 
  result_configuration {
- output_location = var.ouput_location
+ output_location = var.output_location
  }
  }
  }
