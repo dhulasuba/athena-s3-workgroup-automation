@@ -21,9 +21,3 @@ variable "publish_cloudwatch_metrics_enabled" {
   description = "Boolean whether Amazon CloudWatch metrics are enabled for the workgroup."
   default     = true
 }
-
-variable "tags" {
-  type        = map(string)
-  description = "Tags applied to the workgroup."
-  default     = {}
-}
