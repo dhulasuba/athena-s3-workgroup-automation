@@ -5,11 +5,11 @@ variable "enforce_workgroup_configuration" {
 }
 
 
-variable "name" {
-  type        = string
-  description = "The name of the workgroup."
-  default  = "docdb_query_user_business_lending"
-}
+# variable "name" {
+#   type        = string
+#   description = "The name of the workgroup."
+#   default  = "docdb_query_user_business_lending"
+# }
 
 variable "name" {
   type        = list
