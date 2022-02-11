@@ -2,7 +2,9 @@
 
 
 resource "aws_athena_workgroup" "docdb_query_user_business_lending" {
-  name = var.name
+  count = "${length(var.name)}"
+  name = "${element(var.name, count.index)}"
+#   name = var.name
 
   configuration {
     enforce_workgroup_configuration    = var.enforce_workgroup_configuration
