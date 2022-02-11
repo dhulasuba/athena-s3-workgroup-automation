@@ -29,3 +29,7 @@ variable "publish_cloudwatch_metrics_enabled" {
   description = "Boolean whether Amazon CloudWatch metrics are enabled for the workgroup."
   default     = true
 }
+variable "s3_bucket_names" {
+  type = list
+  default = ["athena-workload-dev", "athena-workload-test", "athena-workload-uat"]
+}
