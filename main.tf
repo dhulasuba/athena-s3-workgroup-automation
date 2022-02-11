@@ -22,7 +22,7 @@ resource "aws_athena_workgroup" "docdb_query_user_business_lending" {
 resource "aws_s3_bucket" "buckets" {
   count         = length(var.s3_bucket_names) //count will be 3
   bucket        = var.s3_bucket_names[count.index]
-  acl           = "private"
+#   acl           = "private"
 #   region        = "us-east-1"
 #  tags = {
 #     Name        = " athena-workload-dev"
