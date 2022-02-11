@@ -10,7 +10,7 @@ variable "enforce_workgroup_configuration" {
 #   description = "The name of the workgroup."
 #   default  = ["docdb_query_user_business_lending","docdb_query_user_corporate","docdb_query_user_new_horizon"]
 # }
-=======
+
 # variable "name" {
 #   type        = list
 #   description = "The name of the workgroup."
