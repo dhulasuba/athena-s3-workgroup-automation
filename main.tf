@@ -15,7 +15,7 @@ resource "aws_athena_workgroup" "docdb_query_user_business_lending" {
     publish_cloudwatch_metrics_enabled = var.publish_cloudwatch_metrics_enabled
 
     result_configuration {
-      output_location = "s3://${aws_s3_bucket.buckets[count.index].bucket}"
+      output_location = "s3://${aws_s3_bucket.buckets.bucket}"
 #       output_location = "s3://${aws_s3_bucket.example.bucket}/output/"
     }
   }
