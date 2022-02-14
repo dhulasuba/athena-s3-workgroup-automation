@@ -31,5 +31,5 @@ variable "publish_cloudwatch_metrics_enabled" {
 }
 variable "s3_bucket_names" {
   type = list
-  default = ["dg-athena-devlp-envirnment", "athena-workload-test", "athena-workload-uat"]
+  default = ["dg-athena-devlp-envirnment", "dg-athena-uat-envirnment", "dg-athena-prd-envirnment"]
 }
